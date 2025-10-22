@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+    <title>Блокчейн Технологии - Исследование и Применение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <span>🚀 BlockChain Explorer</span>
+        </div>
+        <nav>
+            <a href="#main-title">Главная</a>
+            <a href="#basics">Основы</a>
+            <a href="#position-demo">Позиционирование</a>
+            <a href="#quiz">Тестирование</a>
+            <a href="#multimedia">Ресурсы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="main-title">Блокчейн Технологии: От Криптовалют к Децентрализованным Приложениям</h1>
+
+        <section id="basics">
+            <h2>Основные принципы блокчейна</h2>
+            
+            <p><strong>Блокчейн</strong> — это инновационная технология распределенного реестра, которая обеспечивает безопасное и прозрачное хранение данных без необходимости в центральном органе управления.</p>
+
+            <div class="blockchain-principles">
+                <div class="principle">
+                    <h3>🔗 Децентрализация</h3>
+                    <p>Данные хранятся на множестве компьютеров одновременно, что исключает единую точку отказа.</p>
+                </div>
+                <div class="principle">
+                    <h3>🔒 Безопасность</h3>
+                    <p>Криптографические алгоритмы защищают данные от несанкционированного доступа и изменений.</p>
+                </div>
+                <div class="principle">
+                    <h3>📝 Прозрачность</h3>
+                    <p>Все транзакции видны участникам сети, обеспечивая доверие и подотчетность.</p>
+                </div>
+            </div>
+
+            <blockquote>
+                "Блокчейн — это технология, которая позволяет не доверять друг другу сторонам приходить к консенсусу о состоянии базы данных."
+                <cite>— Виталик Бутерин, создатель Ethereum</cite>
+            </blockquote>
+        </section>
+
+        <!-- Демонстрация позиционирования из Практической работы №3 -->
+        <section class="position-demo" id="position-demo">
+            <h2>CSS Позиционирование в Веб-Разработке</h2>
+            <p>Веб-разработка блокчейн приложений требует понимания различных техник позиционирования элементов:</p>
+            
+            <div class="pos-block static">Static - обычный поток документа</div>
+            <div class="pos-block relative">Relative - относительное позиционирование</div>
+            
+            <div class="pos-container">
+                <div class="pos-block absolute">Absolute - абсолютное позиционирование внутри контейнера</div>
+            </div>
+            
+            <div class="pos-block fixed">Fixed - фиксированное меню поддержки</div>
+        </section>
+
+        <!-- Демонстрация float из Практической работы №3 -->
+        <section class="float-demo">
+            <h2>Обтекание Контента в Блокчейн Интерфейсах</h2>
+            <div class="float-container">
+                <img src="https://via.placeholder.com/200x150/313244/89b4fa?text=Blockchain+UI" alt="Блокчейн интерфейс">
+                <p>Свойство <code>float</code> используется для создания адаптивных интерфейсов блокчейн-кошельков и дашбордов. При разработке децентрализованных приложений (dApps) важно правильно организовать пространство для отображения транзакций, балансов и смарт-контрактов.</p>
+                <p>Использование float позволяет создавать интуитивно понятные интерфейсы, где графические элементы и текст гармонично сочетаются, обеспечивая лучший пользовательский опыт при взаимодействии с блокчейн-технологиями.</p>
+            </div>
+        </section>
+
+        <!-- Форма из Практической работы №4 -->
+        <section class="quiz-section" id="quiz">
+            <h2>Тестирование Знаний о Блокчейне</h2>
+            <p>Проверьте свое понимание блокчейн-технологий и получите персонализированные рекомендации:</p>
+            
+            <form class="quiz-form" action="#" method="post">
+                
+                <fieldset>
+                    <legend>Личная информация</legend>
+                    
+                    <div class="form-group">
+                        <label for="name">Полное имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Электронная почта:</label>
+                        <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Контактный телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" pattern="\+7\s?[\(]{0,1}\d{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль для доступа:</label>
+                        <input type="password" id="password" name="password" placeholder="Минимум 8 символов" minlength="8" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Блокчейн компетенции</legend>
+                    
+                    <div class="form-group">
+                        <label for="experience">Опишите ваш опыт работы с блокчейн:</label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="Расскажите о ваших проектах, знаниях криптовалют, смарт-контрактов..." minlength="20" maxlength="1000" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Какие блокчейн технологии вас интересуют?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="technology" value="bitcoin" checked> Bitcoin и Lightning Network</label>
+                            <label><input type="checkbox" name="technology" value="ethereum"> Ethereum и смарт-контракты</label>
+                            <label><input type="checkbox" name="technology" value="defi"> DeFi (Децентрализованные финансы)</label>
+                            <label><input type="checkbox" name="technology" value="nft"> NFT и цифровые активы</label>
+                            <label><input type="checkbox" name="technology" value="web3"> Web3 и dApps</label>
+                            <label><input type="checkbox" name="technology" value="enterprise"> Корпоративные блокчейн-решения</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level">Уровень экспертизы:</label>
+                        <select id="level" name="level" required>
+                            <option value="">Выберите ваш уровень</option>
+                            <option value="beginner">Новичок - только начинаю изучение</option>
+                            <option value="intermediate">Продвинутый - есть базовые знания</option>
+                            <option value="advanced">Опытный - работал с блокчейн проектами</option>
+                            <option value="expert">Эксперт - глубокое понимание технологии</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest-date">Когда начали изучать блокчейн?</label>
+                        <input type="datetime-local" id="interest-date" name="interest-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="investment">Инвестиционный опыт:</label>
+                        <input type="range" id="investment" name="investment" min="0" max="100" value="0">
+                        <span id="investment-value">0%</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Дополнительные материалы</legend>
+                    
+                    <div class="form-group">
+                        <label for="portfolio">Загрузите портфолио (если есть):</label>
+                        <input type="file" id="portfolio" name="portfolio" accept=".pdf,.doc,.docx,.jpg,.png">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Предпочтительный способ связи:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contact-method" value="email" checked> Электронная почта</label>
+                            <label><input type="radio" name="contact-method" value="phone"> Телефонный звонок</label>
+                            <label><input type="radio" name="contact-method" value="telegram"> Telegram</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                    <button type="reset" class="btn-reset">Очистить форму</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Мультимедиа из Практической работы №4 -->
+        <section class="multimedia" id="multimedia">
+            <h2>Образовательные Ресурсы по Блокчейну</h2>
+            
+            <div class="video-container">
+                <h3>Введение в технологию блокчейн</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSo_EIwHSd4" title="Образовательное видео о блокчейне" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="map-container">
+                <h3>Центры блокчейн-разработки в мире</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sru!4v1648561234567!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2 id="contacts">Контакты и Поддержка</h2>
+        <div class="contact-info">
+            <p><strong>BlockChain Explorer Research Center</strong></p>
+            <p>
+                Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a><br>
+                Email: <a href="mailto:research@blockchain-explorer.com">research@blockchain-explorer.com</a><br>
+                Telegram: <a href="https://t.me/blockchain_explorer">@blockchain_explorer</a>
+            </p>
+        </div>
+        <p class="copyright">&copy; 2024 BlockChain Explorer. Все права защищены. Исследование и развитие блокчейн-технологий.</p>
+    </footer>
+
+    <script>
+        // Скрипт для отображения значения range
+        document.getElementById('investment').addEventListener('input', function() {
+            document.getElementById('investment-value').textContent = this.value + '%';
+        });
+    </script>
+</body>
+</html>
