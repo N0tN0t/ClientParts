@@ -1,0 +1,204 @@
+:root {
+    --bg: #1e1e2e;
+    --surface: #181825;
+    --overlay: #313244;
+    --border: #45475a;
+    --text: #cdd6f4;
+    --subtext: #bac2de;
+    --blue: #89b4fa;
+    --green: #a6e3a1;
+    --pink: #f5c2e7;
+    --orange: #fab387;
+    --red: #f38ba8;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.nav-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-flex a {
+    padding: 0.5rem 1rem;
+    background: var(--overlay);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-flex a:hover {
+    background: var(--blue);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+
+h1, h2, h3 {
+    color: var(--blue);
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.animated-block {
+    width: 100px;
+    height: 100px;
+    background-color: var(--pink);
+    margin: 2rem auto;
+    animation: circle-to-square 5s infinite alternate;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes circle-to-square {
+    0% {
+        width: 100px;
+        height: 100px;
+        background-color: var(--pink);
+        border-radius: 50%;
+    }
+    50% {
+        width: 150px;
+        height: 100px;
+        background-color: var(--green);
+        border-radius: 20%;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        background-color: var(--blue);
+        border-radius: 0;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+    padding: 1rem;
+    background: var(--overlay);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.flex-item:hover {
+    box-shadow: 0 6px 12px var(--red);
+}
+
+.transform-example {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.transform-box {
+    width: 150px;
+    height: 150px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg) scale(1.2) translateX(20px);
+}
+
+.shadow-box {
+    padding: 1rem;
+    background: var(--surface);
+    box-shadow: 0 8px 16px var(--orange);
+    text-align: center;
+    margin: 2rem auto;
+    width: 50%;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--subtext);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-flex a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .transform-example {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media print {
+        body {
+            background-color: transparent;
+            color: black;
+        }
+
+        .animated-block {
+            animation: none;
+        }
+    }
+}
+
+@media print and (orientation: landscape) {
+    .shadow-box {
+        font-size: 20pt;
+    }
+}

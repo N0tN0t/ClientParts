@@ -3,314 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практические занятия: Анимация и Flexbox в CSS</title>
-    <style>
-        /* === БАЗОВЫЕ СТИЛИ === */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f0f1a;
-            color: #e0e0ff;
-            padding: 2rem;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            color: #89b4fa;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.2rem;
-            border-bottom: 2px solid #45475a;
-            padding-bottom: 0.5rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-            padding: 1.5rem;
-            background: #181825;
-            border-radius: 10px;
-            border: 1px solid #45475a;
-        }
-
-        p, li, dt, dd {
-            margin-bottom: 0.8rem;
-        }
-
-        ul, ol {
-            padding-left: 1.5rem;
-        }
-
-        code {
-            background: #313244;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            color: #a6e3a1;
-        }
-
-        pre {
-            background: #1e1e2e;
-            padding: 1rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            border: 1px solid #45475a;
-            margin: 1rem 0;
-        }
-
-        .demo-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: #1e1e2e;
-            border-radius: 10px;
-        }
-
-        /* === ПРАКТИЧЕСКАЯ РАБОТА №6: АНИМАЦИЯ === */
-        @keyframes circle-to-square {
-            from {
-                width: 100px;
-                height: 100px;
-                background-color: #f38ba8;
-                border-radius: 50%;
-            }
-            50% {
-                width: 150px;
-                height: 80px;
-                background-color: #fab387;
-                border-radius: 20%;
-            }
-            to {
-                width: 100px;
-                height: 100px;
-                background-color: #89b4fa;
-                border-radius: 0;
-            }
-        }
-
-        .anim-circle {
-            width: 100px;
-            height: 100px;
-            background-color: #f38ba8;
-            border-radius: 50%;
-            animation-name: circle-to-square;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0.5s;
-            animation-fill-mode: both;
-            margin: 0 auto;
-            box-shadow: 0 0 15px rgba(243, 139, 168, 0.6);
-            transition: transform 0.3s ease;
-        }
-
-        .anim-circle:hover {
-            animation-play-state: paused;
-            transform: scale(1.2) rotate(45deg);
-        }
-
-        /* === ПРАКТИЧЕСКАЯ РАБОТА №5: FLEXBOX + МЕДИА-ЗАПРОСЫ === */
-        .flex-container {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .flex-item {
-            flex: 1 1 250px;
-            background: #313244;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #45475a;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .flex-item:hover {
-            background: #89b4fa;
-            color: #0f0f1a;
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(137, 180, 250, 0.3);
-        }
-
-        .flex-item h3 {
-            color: #a6e3a1;
-            margin-bottom: 0.5rem;
-        }
-
-        /* === МЕДИА-ЗАПРОСЫ === */
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-
-            .demo-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .flex-container {
-                flex-direction: column;
-            }
-
-            .flex-item {
-                flex: 1 1 auto;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .flex-container {
-                justify-content: space-between;
-            }
-
-            .flex-item {
-                flex: 1 1 30%;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
-
-            section {
-                border: 1px solid #ccc;
-                background: white;
-            }
-
-            .anim-circle, .flex-item:hover {
-                animation: none !important;
-                transform: none !important;
-                box-shadow: none !important;
-            }
-
-            .demo-container, .flex-container {
-                display: block;
-            }
-        }
-
-        @media (orientation: landscape) {
-            .note {
-                background: rgba(166, 227, 161, 0.1);
-                padding: 0.8rem;
-                border-left: 4px solid #a6e3a1;
-                border-radius: 0 6px 6px 0;
-            }
-        }
-
-        @media (orientation: portrait) {
-            .note {
-                background: rgba(245, 194, 231, 0.1);
-                padding: 0.8rem;
-                border-left: 4px solid #f5c2e7;
-                border-radius: 0 6px 6px 0;
-            }
-        }
-    </style>
+    <title>Блокчейн: Децентрализованные Системы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">Блокчейн Инновации</div>
+        <nav class="nav-flex">
+            <a href="#intro">Введение</a>
+            <a href="#consensus">Консенсус</a>
+            <a href="#applications">Применения</a>
+            <a href="#future">Будущее</a>
+        </nav>
+    </header>
 
-    <h1>Практические занятия: CSS Анимация и Flexbox</h1>
+    <main>
+        <section id="intro" class="intro-section">
+            <h1>Блокчейн: Основа Децентрализованных Систем</h1>
+            <p>Блокчейн представляет собой технологию, которая позволяет хранить данные в распределенной сети без центрального контроля. Это обеспечивает безопасность и прозрачность транзакций.</p>
+            <div class="animated-block"></div>
+        </section>
 
-    <!-- ПРАКТИЧЕСКАЯ РАБОТА №6 -->
-    <section id="animation">
-        <h2>Практическая работа №6: Анимация в CSS</h2>
-        <p>Демонстрация трансформации <strong>розового круга в синий квадрат</strong> с промежуточным фиолетовым прямоугольником.</p>
-
-        <div class="demo-container">
-            <div class="anim-circle"></div>
-        </div>
-
-        <h3>Код анимации:</h3>
-        <pre><code>@keyframes circle-to-square {
-    from {
-        width: 100px;
-        height: 100px;
-        background-color: #f38ba8;
-        border-radius: 50%;
-    }
-    50% {
-        width: 150px;
-        height: 80px;
-        background-color: #fab387;
-        border-radius: 20%;
-    }
-    to {
-        width: 100px;
-        height: 100px;
-        background-color: #89b4fa;
-        border-radius: 0;
-    }
-}
-
-.anim-circle {
-    width: 100px;
-    height: 100px;
-    background-color: #f38ba8;
-    border-radius: 50%;
-    animation: circle-to-square 3s infinite alternate ease-in-out 0.5s both;
-}</code></pre>
-
-        <p><strong>Свойства анимации:</strong></p>
-        <ul>
-            <li><code>animation-name: circle-to-square</code></li>
-            <li><code>animation-duration: 3s</code></li>
-            <li><code>animation-iteration-count: infinite</code></li>
-            <li><code>animation-direction: alternate</code></li>
-            <li><code>animation-timing-function: ease-in-out</code></li>
-            <li><code>animation-delay: 0.5s</code></li>
-            <li><code>animation-fill-mode: both</code></li>
-        </ul>
-
-        <p class="note">При наведении — анимация останавливается, элемент поворачивается и увеличивается.</p>
-    </section>
-
-    <!-- ПРАКТИЧЕСКАЯ РАБОТА №5 -->
-    <section id="flexbox">
-        <h2>Практическая работа №5: Flexbox + Медиа-запросы</h2>
-        <p>Адаптивная сетка блоков с использованием <strong>Flexible Box Layout</strong>.</p>
-
-        <div class="flex-container">
-            <div class="flex-item">
-                <h3>Блокчейн</h3>
-                <p>Распределённый реестр транзакций, защищённый криптографией.</p>
+        <section id="consensus" class="consensus-section">
+            <h2>Механизмы Консенсуса в Блокчейне</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>Proof of Work</h3>
+                    <p>Метод, используемый в Bitcoin, где майнеры решают сложные задачи для добавления блоков.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Proof of Stake</h3>
+                    <p>Энергоэффективный подход, где валидаторы выбираются на основе владения токенами.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Delegated Proof of Stake</h3>
+                    <p>Делегаты голосуют за представителей, ускоряя процесс подтверждения.</p>
+                </div>
             </div>
-            <div class="flex-item">
-                <h3>Хеш</h3>
-                <p>Уникальный цифровой отпечаток данных фиксированной длины.</p>
+        </section>
+
+        <section id="applications" class="applications-section">
+            <h2>Применения Блокчейна</h2>
+            <p>От финансов до цепочек поставок, блокчейн революционизирует отрасли.</p>
+            <div class="transform-example">
+                <div class="transform-box">Финансы</div>
+                <div class="transform-box">Здравоохранение</div>
+                <div class="transform-box">Логистика</div>
             </div>
-            <div class="flex-item">
-                <h3>Майнинг</h3>
-                <p>Процесс подтверждения транзакций и создания новых блоков.</p>
-            </div>
-        </div>
+        </section>
 
-        <h3>Медиа-запросы в действии:</h3>
-        <ul>
-            <li><strong>≤768px:</strong> Вертикальная компоновка</li>
-            <li><strong>≥1024px:</strong> Равномерные колонки</li>
-            <li><strong>print:</strong> Убираются анимации и тени</li>
-            <li><strong>landscape:</strong> Зелёная подсветка заметок</li>
-            <li><strong>portrait:</strong> Розовая подсветка заметок</li>
-        </ul>
+        <section id="future" class="future-section">
+            <h2>Будущее Блокчейна</h2>
+            <p>С развитием Web3 и метавселенных, блокчейн станет основой цифровой экономики.</p>
+            <div class="shadow-box">Потенциал роста</div>
+        </section>
+    </main>
 
-        <div class="note">
-            <p><strong>Текущая ориентация:</strong> Поверните устройство — цвет заметки изменится!</p>
-        </div>
-    </section>
-
+    <footer class="footer">
+        <p>&copy; 2025 Блокчейн Инновации. Все права защищены.</p>
+    </footer>
 </body>
 </html>
