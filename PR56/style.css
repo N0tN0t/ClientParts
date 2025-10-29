@@ -70,32 +70,66 @@ h1, h2, h3 {
 }
 
 .animated-block {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     background-color: var(--pink);
     margin: 2rem auto;
-    animation: circle-to-square 5s infinite alternate;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
-@keyframes circle-to-square {
+.animated-block.pow {
+    animation: pow 25s infinite alternate;
+}
+
+.animated-block.pos {
+    animation: pos 25s infinite alternate;
+}
+
+@keyframes pow {
     0% {
-        width: 100px;
-        height: 100px;
-        background-color: var(--pink);
-        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        background-image: url("images/Pow1.png");
+        border-radius: 30%;
     }
     50% {
-        width: 150px;
-        height: 100px;
-        background-color: var(--green);
+        width: 300px;
+        height: 250px;
+        background-image: url("images/Pow2.png");
         border-radius: 20%;
     }
     100% {
-        width: 100px;
-        height: 100px;
-        background-color: var(--blue);
-        border-radius: 0;
+        width: 250px;
+        height: 250px;
+        background-image: url("images/Pow3.png");
+        border-radius: 10%;
+    }
+}
+
+@keyframes pos {
+    0% {
+        width: 250px;
+        height: 250px;
+        background-image: url("images/Pos1.png");
+        border-radius: 30%;
+    }
+    50% {
+        width: 300px;
+        height: 250px;
+        background-image: url("images/Pos2.png");
+        border-radius: 20%;
+    }
+    100% {
+        width: 250px;
+        height: 250px;
+        background-image: url("images/Pos3.png");
+        border-radius: 10%;
     }
 }
 
@@ -119,7 +153,7 @@ h1, h2, h3 {
     box-shadow: 0 6px 12px var(--red);
 }
 
-.transform-example {
+.transform {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -135,19 +169,20 @@ h1, h2, h3 {
     justify-content: center;
     color: var(--bg);
     transition: transform 0.5s ease-in-out;
-}
-
-.transform-box:hover {
-    transform: rotate(45deg) scale(1.2) translateX(20px);
-}
-
-.shadow-box {
-    padding: 1rem;
-    background: var(--surface);
+    border-radius: 8px;
     box-shadow: 0 8px 16px var(--orange);
-    text-align: center;
-    margin: 2rem auto;
-    width: 50%;
+}
+
+.transform-box.left:hover {
+    transform: rotate(-20deg) scale(1.1) translateX(-20px);
+}
+
+.transform-box.middle:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.transform-box.right:hover {
+    transform: rotate(20deg) scale(1.1) translateX(20px);
 }
 
 .footer {
