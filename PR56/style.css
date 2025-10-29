@@ -1,5 +1,6 @@
 :root {
     --bg: #1e1e2e;
+    --po: #101420;
     --surface: #181825;
     --overlay: #313244;
     --border: #45475a;
@@ -72,7 +73,7 @@ h1, h2, h3 {
 .animated-block {
     width: 250px;
     height: 250px;
-    background-color: var(--pink);
+    background-color: var(--po);
     margin: 2rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -96,19 +97,22 @@ h1, h2, h3 {
         width: 250px;
         height: 250px;
         background-image: url("images/Pow1.png");
-        border-radius: 30%;
+        border-radius: 10%;
+        background-size: cover;
     }
     50% {
         width: 300px;
         height: 250px;
         background-image: url("images/Pow2.png");
-        border-radius: 20%;
+        border-radius: 25%;
+        background-size: cover;
     }
     100% {
         width: 250px;
         height: 250px;
         background-image: url("images/Pow3.png");
-        border-radius: 10%;
+        border-radius: 50%;
+        background-size: contain;
     }
 }
 
@@ -117,19 +121,22 @@ h1, h2, h3 {
         width: 250px;
         height: 250px;
         background-image: url("images/Pos1.png");
-        border-radius: 30%;
+        border-radius: 10%;
+        background-size: cover;
     }
     50% {
         width: 300px;
         height: 250px;
         background-image: url("images/Pos2.png");
-        border-radius: 20%;
+        border-radius: 25%;
+        background-size: cover;
     }
     100% {
         width: 250px;
         height: 250px;
         background-image: url("images/Pos3.png");
-        border-radius: 10%;
+        border-radius: 50%;
+        background-size: contain;
     }
 }
 
