@@ -161,14 +161,13 @@ blockquote cite {
   background: rgba(49,50,68,.3);
 }
 
-/* Float */
 .float-container { overflow: hidden; }
 .float-container img {
   float: left;
   margin: 0 1rem 1rem 0;
   border-radius: 6px;
   width: 150px;
-  height: 150px;
+  height: 300px;
 }
 
 .quiz-form { max-width: 600px; margin: 0 auto; }
